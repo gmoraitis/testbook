@@ -1,0 +1,35 @@
+{
+    "title": "Address Book",
+    "name": "address-book",
+    "version": "4.2.2",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
+    "description": "A simple address book application with backbonejs",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "license": "",
+    "author": "George Moraitis",
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "bootstrap": "4.5.0",
+        "jquery": "3.5.1",
+        "jquery.easing": "^1.4.1"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.12",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "merge-stream": "2.0.0"
+    }
+}
