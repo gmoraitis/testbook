@@ -3,6 +3,13 @@
 var app = app || {};
 
 app.BookView = Backbone.View.extend({
+    el: '#book',
+
+    initialize: function (initialBooks) {
+        this.model = new app.Book(initialBooks);
+        this.render();
+    },
+
     tagName: 'div',
     className: 'align-self-start mr-3',//'bookContainer'
     template: _.template($('#bookTemplate').html()),
@@ -21,4 +28,5 @@ app.BookView = Backbone.View.extend({
         // Delete view
         this.remove();
     },
+  
 });
