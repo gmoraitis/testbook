@@ -3,13 +3,19 @@
 var app = app || {};
 
 $(function () {
-    var books = [
+    var persons = [
         {
-            title: 'JavaScript: The Good Parts', author: 'Douglas Crockford'
+            name: 'George Moraitis', 
+            email: 'george@gmail.com',
+            tel:'+41 23 233 24 23',
+            avatar:''
         },
         {
-            title: 'The Little Book on CoffeeScript', author: 'Alex MacCaw'
+            name: 'Nick Mor', 
+            email: 'mor@gmail.com',
+            tel:'+41 23 233 24 23',
+            avatar:''
         }
     ];
-    new app.LibraryView(books);
+    new app.ContactsView(persons);
 });

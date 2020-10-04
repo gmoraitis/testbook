@@ -28,17 +28,21 @@
           <h2>Form</h2>
 
           <!-- Books Form -->
-          <div class="row" id="book">
+          <div class="row" id="contact">
             <div class="col-lg-8 mx-auto">
             
-              <form id="addBook" action="#">
+              <form id="addContact" action="#">
                 <div class="form-group">
-                  <label for="title">Title:</label>
-                  <input type="text" class="form-control" id="title">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" id="name">
                 </div>
                 <div class="form-group">
-                  <label for="author">Author:</label>
-                  <input id="author" class="form-control" type="text" />
+                  <label for="email">Email:</label>
+                  <input id="email" class="form-control" type="text" />
+                </div>
+                <div class="form-group">
+                  <label for="tel">Telephone (Switzerland):</label>
+                  <input id="tel" class="form-control" type="text" />
                 </div>
                 <button type="submit" id="add" class="btn btn-primary">Add New Book</button>
               </form>
@@ -52,14 +56,37 @@
   <!-- End of app -->
 
   <!-- One Book Template -->
-  <script id="bookTemplate" type="text/template">
-    <img src="<%= coverImage %>"/>
-      <ul>
-        <li><%= title %></li>
-        <li><%= author %></li>
-      </ul>
-      <button class="delete">Delete</button>  
+  <script id="contactTemplate" type="text/template">
+    <hr>
+    <div class="thumbnail">
+      <img class="align-self-start mr-3" style="width: 5rem;" src="images/<%- avatar %>">
+    </div>
+    <div class="media-heading">
+      <h3>
+        <%- name %>
+        <small>
+          <a href="#contacts/edit/<%- id %>"><span class="glyphicon glyphicon-pencil"></span></a>
+          <a href="#contacts/delete/<%- id %>" class="delete-contact">
+            <span class="glyphicon glyphicon-trash"></span>
+          </a>
+        </small>
+      </h3>
+    </div>
+    <div class="media-body">
+      <dl>
+        <dt>Phone Number:</dt>
+        <dd><%- tel %></dd>
+        <dt>Email:</dt>
+        <dd><%- email %></dd>
+      </dl>
+    </div>
+    <hr>
+      <button type="button" class="delete btn btn-dark">Delete</button>  
   </script>
+ 
+    
+  
+  
 
 
   <!-- Bootstrap core JavaScript -->
@@ -79,10 +106,10 @@
   <script src="js/scrolling-nav.js"></script>
 
   <!-- Backbone App -->
-  <script src="js/models/book.js"></script>
-  <script src="js/collections/library.js"></script>
-  <script src="js/views/bookView.js"></script>
-  <script src="js/views/libraryView.js"></script>
+  <script src="js/models/contact.js"></script>
+  <script src="js/collections/contacts.js"></script>
+  <script src="js/views/contactView.js"></script>
+  <script src="js/views/contactsView.js"></script>
   <script src="js/app.js"></script>
 
 </body>
