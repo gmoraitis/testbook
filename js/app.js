@@ -11,5 +11,5 @@ $(function () {
             title: 'The Little Book on CoffeeScript', author: 'Alex MacCaw'
         }
     ];
-    new app.BookView(books);
+    new app.LibraryView(books);
 });
