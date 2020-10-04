@@ -22,9 +22,11 @@
         "url": ""
     },
     "dependencies": {
+        "backbone": "^1.4.0",
         "bootstrap": "4.5.0",
         "jquery": "3.5.1",
-        "jquery.easing": "^1.4.1"
+        "jquery.easing": "^1.4.1",
+        "underscore": "^1.11.0"
     },
     "devDependencies": {
         "browser-sync": "^2.26.12",
