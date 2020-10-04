@@ -20,16 +20,17 @@
 
 <body id="page-top">
 
-<!-- Main app -->
+  <!-- Main app -->
   <section>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Form</h2>
-        
+
           <!-- Books Form -->
           <div class="row" id="book">
             <div class="col-lg-8 mx-auto">
+            
               <form id="addBook" action="#">
                 <div class="form-group">
                   <label for="title">Title:</label>
@@ -39,16 +40,9 @@
                   <label for="author">Author:</label>
                   <input id="author" class="form-control" type="text" />
                 </div>
-                <div class="form-group">
-                  <label for="releaseDate">Release date: </label>
-                  <input id="releaseDate" class="form-control" type="text" />
-                </div>
-                <div class="form-group">
-                  <label for="keywords">Keywords: </label>
-                  <input id="keywords" class="form-control" type="text" />
-                </div>
                 <button type="submit" id="add" class="btn btn-primary">Add New Book</button>
               </form>
+              <!-- End of form -->
             </div>
           </div>
         </div>
@@ -63,8 +57,6 @@
       <ul>
         <li><%= title %></li>
         <li><%= author %></li>
-        <li><%= releaseDate %></li>
-        <li><%= keywords %></li>
       </ul>
       <button class="delete">Delete</button>  
   </script>
@@ -89,13 +81,9 @@
   <!-- Backbone App -->
   <script src="js/models/book.js"></script>
   <script src="js/collections/library.js"></script>
-  <script src="js/views/book.js"></script>
-  <script src="js/views/library.js"></script>
+  <script src="js/views/bookView.js"></script>
+  <script src="js/views/libraryView.js"></script>
   <script src="js/app.js"></script>
-
-
-
-
 
 </body>
 

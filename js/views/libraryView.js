@@ -38,5 +38,8 @@ app.LibraryView = Backbone.View.extend({
             });
             this.$el.append(bookView.render().el);
         },
-
 });
+
+
+
+
