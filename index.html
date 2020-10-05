@@ -14,7 +14,7 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/book.css" rel="stylesheet">
+  <link href="css/address.css" rel="stylesheet">
 
 </head>
 
@@ -22,16 +22,16 @@
 
   <!-- Main app -->
   <section>
-    <div class="container">
+    <div class="container" action='#'>
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Contact Form</h2>
 
-          <!-- Books Form -->
-          <div class="row" id="contact">
+          <!-- Contacts Form -->
+          <div class="row-lg-8" id='contact' >
             <div class="col-lg-8 mx-auto">
             
-              <form id="addContact" action="#">
+              <form id="addContact" >
                 <div class="form-group">
                   <label for="name">Name:</label>
                   <input type="text" class="form-control" id="name" required>
@@ -44,10 +44,16 @@
                   <label class="control-label" for="tel">Telephone (Switzerland):</label>
                   <input  type="tel"  class="form-control" id="tel" required>
                 </div>
+                <div class="form-group">
+                  <label class="control-label" for="info">Additional Info:</label>
+                  <input  type="text"  class="form-control" id="info" required>
+                </div>
                 <button type="submit" id="add" class="btn btn-primary">Add New Contact</button>
               </form>
               <!-- End of form -->
+
             </div>
+            <div class="row" ></div>
           </div>
         </div>
       </div>
@@ -58,18 +64,13 @@
   <!-- One Book Template -->
   <script id="contactTemplate" type="text/template">
     <hr>
+  
     <div class="thumbnail">
       <img class="align-self-start mr-3" style="width: 5rem;" src="images/<%- avatar %>">
     </div>
     <div class="media-heading">
       <h3>
         <%- name %>
-        <small>
-          <a href="#contacts/edit/<%- id %>"><span class="glyphicon glyphicon-pencil"></span></a>
-          <a href="#contacts/delete/<%- id %>" class="delete-contact">
-            <span class="glyphicon glyphicon-trash"></span>
-          </a>
-        </small>
       </h3>
     </div>
     <div class="media-body">
@@ -78,9 +79,12 @@
         <dd><%- email %></dd>
         <dt>Telephone:</dt>
         <dd><%- tel %></dd>
-        
       </dl>
+      <h5 class="mt-0">Personal Information</h5>
+      <%- info %>
     </div>
+   
+</div>
     <hr>
       <button type="button" class="delete btn btn-dark">Delete</button>  
   </script>

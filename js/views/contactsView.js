@@ -26,37 +26,38 @@ app.ContactsView = Backbone.View.extend({
 
                 if ($(el).val() != '') {
                     formData[el.id] = $(el).val();
-                    // console.log(formData[]);
+
                 }
                 //VALIDATION NOT WORKING
                 // var pattern = /^\+41(\s*\d\s*){9}$/
-                // if (!pattern.test(formData)) {
+                // if (!pattern.test(formData[?])) {
                 //     alert("Error in telephone number.Please type a 9-digit number following exactly this pattern '+41 44 123 12 34' ")
                 // }
                 // else {
-                    
+
                 // }
-               
+                
 
             });
             this.collection.add(new app.Contact(formData));
             console.log(this.collection.size());
 
-            
         }
 
         else {
             alert("Maximum number of contacts is 3")
         }
     },
+
     // render library by rendering each book in its collection
     render: function () {
         this.collection.each(function (item) {
             this.renderContact(item);
-        }, this);
-
+        },
+            this);
 
     },
+
     // render a book by creating a BookView and appending the 
     // element it renders to the library's element 
     renderContact:
@@ -65,8 +66,8 @@ app.ContactsView = Backbone.View.extend({
                 model: item
             });
             this.$el.append(contactView.render().el);
-
-
+        
+            
         },
 });
 

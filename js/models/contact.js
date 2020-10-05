@@ -8,8 +8,9 @@ app.Contact = Backbone.Model.extend({
         avatar: null,
         name: null,
         email: null,
-        tel: null
-    },
+        tel: null,
+        info:''
+      },
     initialize: function() {
 		this.set('avatar', _.random(1, 5) + '.jpg');
 	  }
