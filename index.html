@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Form</h2>
+          <h2>Contact Form</h2>
 
           <!-- Books Form -->
           <div class="row" id="contact">
@@ -34,17 +34,17 @@
               <form id="addContact" action="#">
                 <div class="form-group">
                   <label for="name">Name:</label>
-                  <input type="text" class="form-control" id="name">
+                  <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input id="email" class="form-control" type="text" />
+                  <input type="email"  class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="tel">Telephone (Switzerland):</label>
-                  <input id="tel" class="form-control" type="text" />
+                  <label class="control-label" for="tel">Telephone (Switzerland):</label>
+                  <input  type="tel"  class="form-control" id="tel" required>
                 </div>
-                <button type="submit" id="add" class="btn btn-primary">Add New Book</button>
+                <button type="submit" id="add" class="btn btn-primary">Add New Contact</button>
               </form>
               <!-- End of form -->
             </div>
@@ -74,10 +74,11 @@
     </div>
     <div class="media-body">
       <dl>
-        <dt>Phone Number:</dt>
-        <dd><%- tel %></dd>
         <dt>Email:</dt>
         <dd><%- email %></dd>
+        <dt>Telephone:</dt>
+        <dd><%- tel %></dd>
+        
       </dl>
     </div>
     <hr>

@@ -4,8 +4,8 @@ var app = app || {};//?????
 
 app.Contact = Backbone.Model.extend({
     defaults: {
-        id:null,
-        avatar:null,
+        id: null,
+        avatar: null,
         name: null,
         email: null,
         tel: null
