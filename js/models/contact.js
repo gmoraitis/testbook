@@ -1,4 +1,3 @@
-// site/js/models/contact.js
 
 var app = app || {};// What does this means?
 

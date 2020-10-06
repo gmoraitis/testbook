@@ -1,4 +1,3 @@
-// site/js/collections/library.js
 
 var app = app || {};
 

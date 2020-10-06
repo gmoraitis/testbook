@@ -14,7 +14,7 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/address.css" rel="stylesheet">
+  <link href="css/addressBook.css" rel="stylesheet">
 
 </head>
 
@@ -38,7 +38,6 @@
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-<<<<<<< HEAD
                   <input type="email" class="form-control" id="email" placeholder="example: something@gmail.com"
                     required>
                 </div>
@@ -49,17 +48,6 @@
                 <div class="form-group">
                   <label class="control-label" for="info">Additional Info:</label>
                   <input type="text" class="form-control" id="info" placeholder="Add more info... ">
-=======
-                  <input type="email"  class="form-control" id="email"  placeholder="example: something@gmail.com" required>
-                </div>
-                <div class="form-group">
-                  <label class="control-label" for="tel">Telephone (Switzerland):</label>
-                  <input  type="tel"  class="form-control" id="tel"  placeholder="example: +41 44 123 12 34 " required>
-                </div>
-                <div class="form-group">
-                  <label class="control-label" for="info">Additional Info:</label>
-                  <input  type="text"  class="form-control" id="info" placeholder="Add more info... ">
->>>>>>> 9caf42cf637d97a6c0a5c81c031e12e907df6b67
                 </div>
                 <button type="submit" id="add" class="btn btn-primary">Add New Contact</button>
               </form>
@@ -74,7 +62,7 @@
   </section>
   <!-- End of app -->
 
-  <!-- One Book Template -->
+  <!-- One Contact Template -->
   <script id="contactTemplate" type="text/template">
     <br>
     <div class="thumbnail">
@@ -95,18 +83,17 @@
       <h5 class="mt-0">Personal Information</h5>
       <%- info %>
     </div>
-  
     <hr>
       <button type="button" class="delete btn btn-dark">Delete</button> 
 
   </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="node_modules/jquery.easing/jquery.easing.min.js"></script>
 
   <!-- Underscore -->
   <script src="node_modules/underscore/underscore-min.js"></script>
@@ -114,7 +101,7 @@
   <!-- Backbone -->
   <script src="node_modules/backbone/backbone-min.js"></script>
 
-  <!-- Backbone App -->
+  <!-- Files -->
   <script src="js/models/contact.js"></script>
   <script src="js/collections/contacts.js"></script>
   <script src="js/views/contactView.js"></script>

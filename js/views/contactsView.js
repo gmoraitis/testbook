@@ -1,10 +1,8 @@
-// site/js/views/library.js
 
 var app = app || {};
 
 app.ContactsView = Backbone.View.extend({
     el: '#contact',
-
 
     initialize: function (initialContacts) {
         this.collection = new app.Contacts(initialContacts);
@@ -16,7 +14,7 @@ app.ContactsView = Backbone.View.extend({
     },
 
     addContact: function (e) {
-
+        //Maximum number of contacts is 3. Change the maxContacts = 10 to add until 10 contacts. 
         var maxContacts = 3;
 
         if (this.collection.size() < maxContacts) {
@@ -26,7 +24,6 @@ app.ContactsView = Backbone.View.extend({
 
                 if ($(el).val() != '') {
                     formData[el.id] = $(el).val();
-
                 }
                 //VALIDATION NOT WORKING !!
                 // var pattern = /^\+41(\s*\d\s*){9}$/
@@ -35,13 +32,10 @@ app.ContactsView = Backbone.View.extend({
                 // }
                 // else {
                 // } 
-
             });
             this.collection.add(new app.Contact(formData));
             console.log(this.collection.size());
-
         }
-
         else {
             alert("Maximum number of contacts is 3")
         }
@@ -53,7 +47,6 @@ app.ContactsView = Backbone.View.extend({
             this.renderContact(item);
         },
             this);
-
     },
 
     // render a conatct by creating a ContactView and appending the 
@@ -64,8 +57,6 @@ app.ContactsView = Backbone.View.extend({
                 model: item
             });
             this.$el.append(contactView.render().el);
-        
-            
         },
 });
 
