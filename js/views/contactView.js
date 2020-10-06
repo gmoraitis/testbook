@@ -3,10 +3,8 @@
 var app = app || {};
 
 app.ContactView = Backbone.View.extend({
-   
-
     tagName: 'div',
-    className: 'align-self-start mr-3',//'bookContainer'
+    className: 'mr-3',
     template: _.template($('#contactTemplate').html()),
     render: function () {
         // tmpl is a function that takes a JSON object and returns html

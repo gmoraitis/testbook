@@ -18,7 +18,7 @@
 
 </head>
 
-<body id="page-top">
+<body>
 
   <!-- Main app -->
   <section>
@@ -28,32 +28,33 @@
           <h2>Contact Form</h2>
 
           <!-- Contacts Form -->
-          <div class="row-lg-8" id='contact' >
+          <div class="row-lg-8" id='contact'>
             <div class="col-lg-8 mx-auto">
-            
-              <form id="addContact" >
+
+              <form id="addContact">
                 <div class="form-group">
                   <label for="name">Name:</label>
                   <input type="text" class="form-control" id="name" placeholder="example: George Moraitis" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email"  class="form-control" id="email"  placeholder="example: something@gmail.com" required>
+                  <input type="email" class="form-control" id="email" placeholder="example: something@gmail.com"
+                    required>
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="tel">Telephone (Switzerland):</label>
-                  <input  type="tel"  class="form-control" id="tel"  placeholder="example: +41 44 123 12 34 " required>
+                  <input type="tel" class="form-control" id="tel" placeholder="example: +41 44 123 12 34 " required>
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="info">Additional Info:</label>
-                  <input  type="text"  class="form-control" id="info" placeholder="Add more info... ">
+                  <input type="text" class="form-control" id="info" placeholder="Add more info... ">
                 </div>
                 <button type="submit" id="add" class="btn btn-primary">Add New Contact</button>
               </form>
               <!-- End of form -->
 
             </div>
-            <div class="row" ></div>
+            <div class="row"></div>
           </div>
         </div>
       </div>
@@ -63,10 +64,9 @@
 
   <!-- One Book Template -->
   <script id="contactTemplate" type="text/template">
-    <hr>
-  
+    <br>
     <div class="thumbnail">
-      <img class=" mr-3" style="width: 4rem;" src="images/<%- avatar %>">
+      <img class="mr-3" style="width: 4rem;" src="images/<%- avatar %>">
     </div>
     <div class="media-heading">
       <h3>
@@ -83,16 +83,11 @@
       <h5 class="mt-0">Personal Information</h5>
       <%- info %>
     </div>
-   
-</div>
+  
     <hr>
-      <button type="button" class="delete btn btn-dark">Delete</button>  
-  </script>
- 
-    
-  
-  
+      <button type="button" class="delete btn btn-dark">Delete</button> 
 
+  </script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -106,9 +101,6 @@
 
   <!-- Backbone -->
   <script src="node_modules/backbone/backbone-min.js"></script>
-
-  <!-- Custom JavaScript -->
-  <script src="js/scrolling-nav.js"></script>
 
   <!-- Backbone App -->
   <script src="js/models/contact.js"></script>

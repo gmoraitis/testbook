@@ -28,15 +28,13 @@ app.ContactsView = Backbone.View.extend({
                     formData[el.id] = $(el).val();
 
                 }
-                //VALIDATION NOT WORKING
+                //VALIDATION NOT WORKING !!
                 // var pattern = /^\+41(\s*\d\s*){9}$/
                 // if (!pattern.test(formData[?])) {
                 //     alert("Error in telephone number.Please type a 9-digit number following exactly this pattern '+41 44 123 12 34' ")
                 // }
                 // else {
-
-                // }
-                
+                // } 
 
             });
             this.collection.add(new app.Contact(formData));
@@ -49,7 +47,7 @@ app.ContactsView = Backbone.View.extend({
         }
     },
 
-    // render library by rendering each book in its collection
+    // render an address book by rendering each contact in its collection
     render: function () {
         this.collection.each(function (item) {
             this.renderContact(item);
@@ -58,8 +56,8 @@ app.ContactsView = Backbone.View.extend({
 
     },
 
-    // render a book by creating a BookView and appending the 
-    // element it renders to the library's element 
+    // render a conatct by creating a ContactView and appending the 
+    // element it renders to the address book element 
     renderContact:
         function (item) {
             var contactView = new app.ContactView({

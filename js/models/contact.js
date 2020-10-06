@@ -1,6 +1,6 @@
-// site/js/models/book.js
+// site/js/models/contact.js
 
-var app = app || {};//?????
+var app = app || {};// What does this means?
 
 app.Contact = Backbone.Model.extend({
     defaults: {
